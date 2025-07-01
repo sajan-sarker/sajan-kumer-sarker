@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sajan Kumer Sarker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+  <body class="font-sans">
+    <nav class="bg-gray-800 text-white p-4 fixed w-full z-10">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex justify-center">
+          <ul class="flex space-x-6">
+            <li>
+              <a
+                href="#home"
+                data-section="home"
+                class="nav-link hover:text-gray-300">Home</a>
+            </li>
+            <li>
+              <a
+                href="#about"
+                data-section="about"
+                class="nav-link hover:text-gray-300">About</a>
+            </li>
+            <li>
+              <a
+                href="#educations"
+                data-section="educations"
+                class="nav-link hover:text-gray-300">Educations</a>
+            </li>
+            <li>
+              <a
+                href="#projects"
+                data-section="projects"
+                class="nav-link hover:text-gray-300">Projects</a>
+            </li>
+            <li>
+              <a
+                href="#skills"
+                data-section="skills"
+                class="nav-link hover:text-gray-300">Skills</a>
+            </li>
+            <li>
+              <a
+                href="#certifications"
+                data-section="certifications"
+                class="nav-link hover:text-gray-300">Certifications</a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                data-section="contact"
+                class="nav-link hover:text-gray-300">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden flex justify-end pr-4">
+        <button id="menu-toggle" class="text-white focus:outline-none">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-gray-800 text-white p-4 absolute w-full top-16">
+        <ul class="flex flex-col space-y-2">
+          <li><a href="#home" class="hover:text-gray-300">Home</a></li>
+          <li><a href="#about" class="hover:text-gray-300">About</a></li>
+          <li>
+            <a href="#educations" class="hover:text-gray-300">Educations</a>
+          </li>
+          <li><a href="#projects" class="hover:text-gray-300">Projects</a></li>
+          <li><a href="#skills" class="hover:text-gray-300">Skills</a></li>
+          <li>
+            <a href="#certifications" class="hover:text-gray-300">Certifications</a>
+          </li>
+          <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="home" class="pt-20 bg-gray-100">
+      <div
+        class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+        <!-- Text Column -->
+        <div class="md:w-1/2 space-y-4">
+          <span
+            class="inline-block bg-black text-white px-3 py-1 rounded-full text-sm font-semibold">It's me</span>
+          <h1 class="text-4xl md:text-5xl font-bold">Sajan Kumer Sarker</h1>
+          <p class="text-xl text-gray-700 font-semibold">
+            Machine Learning | Deep Learning | Large Language Models
+          </p>
+          <p class="text-gray-600">
+            Fresh CSE Graduate from North South University passionate about
+            Artificial Intelligence.
+          </p>
+
+          <div class="flex justify-center space-x-4 mt-2 text-2xl">
+            <a
+              href="https://facebook.com/ssajan.sarker"
+              target="_blank"
+              aria-label="Facebook">
+              <i class="fab fa-facebook hover:text-blue-700"></i>
+            </a>
+            <a
+              href="https://instagram.com/sajan_sarker"
+              target="_blank"
+              aria-label="Instagram">
+              <i class="fab fa-instagram hover:text-pink-500"></i>
+            </a>
+            <a
+              href="https://twitter.com/sajan_sarker3"
+              target="_blank"
+              aria-label="Twitter">
+              <i class="fab fa-x-twitter hover:text-gray-500"></i>
+            </a>
+            <a
+              href="https://linkedin.com/in/sajan-sarker"
+              target="_blank"
+              aria-label="LinkedIn">
+              <i class="fab fa-linkedin hover:text-blue-700"></i>
+            </a>
+            <a
+              href="https://github.com/sajan-sarker"
+              target="_blank"
+              aria-label="GitHub">
+              <i class="fab fa-github hover:text-gray-700"></i>
+            </a>
+          </div>
+
+          <a href="#contact">
+            <button
+              class="mt-4 bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full text-lg font-semibold shadow">
+              let's talk
+            </button>
+          </a>
+        </div>
+
+        <!-- Image Column -->
+        <div class="md:w-1/3 flex justify-center">
+          <img
+            src="static/img/profile-illustration.png"
+            alt="Profile Photo"
+            class="w-64 h-64 object-cover rounded-full border-4 border-gray-300 shadow-lg" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="p-6 bg-white">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center">About Me</h2>
+        <p class="mt-4 md:mt-6 text-gray-600 text-center text-base md:text-lg">
+          Aspiring AI engineer eager to build smart solutions through machine
+          learning and software development
+        </p>
+        <div class="mt-4 md:mt-6 p-4 bg-gray-50 rounded shadow">
+          <p class="text-base md:text-lg">
+            I am a fresh CSE graduate with a strong foundation in Artificial
+            Intelligence, passionate about building intelligent systems. Seeking
+            an entry-level role in Machine Learning, AI, or Software Engineering
+            where I can contribute to real-world projects and grow
+            professionally.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="educations" class="p-6 bg-gray-100">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center">Educations</h2>
+        <div class="mt-4 md:mt-6 flex flex-col space-y-4">
+          <div class="card bg-gray-50 p-4 m-2 rounded shadow w-full">
+            <h3 class="text-lg md:text-xl font-bold">
+              Bachelor of Science in Computer Science and Engineering (BSCSE)
+            </h3>
+            <p>North South University, Dhaka, Bangladesh</p>
+            <p>February 2021 - July 2025</p>
+            <p class="text-base md:text-lg">CGPA 3.04 out of 4.00</p>
+            <p class="text-base md:text-lg">
+              Relevant Coursework: Data Structures & Algorithms, Software
+              Engineering, Advance Database, Machine Learning, and Deep
+              Learning.
+            </p>
+          </div>
+          <div class="card bg-gray-50 p-4 m-2 rounded shadow w-full">
+            <h3 class="text-lg md:text-xl font-bold">
+              Higher Secondary Certificate (HSC)
+            </h3>
+            <p>Nawab Habibullah Model School and College</p>
+            <p>May 2017 - July 2019</p>
+            <p class="text-base md:text-lg">GPA 4.67 out of 5.00</p>
+            <p class="text-base md:text-lg">Group - Science</p>
+          </div>
+          <div class="card bg-gray-50 p-4 m-2 rounded shadow w-full">
+            <h3 class="text-lg md:text-xl font-bold">
+              Secondary Secondary Certificate (SSC)
+            </h3>
+            <p>Baunia Abdul Jalil High School</p>
+            <p>May 2017 - July 2019</p>
+            <p class="text-base md:text-lg">GPA 4.68 out of 5.00</p>
+            <p class="text-base md:text-lg">Group - Science</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="p-6 bg-white">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center">Projects</h2>
+        <div
+          class="mt-4 md:mt-6 bg-gray-200 p-4 rounded shadow flex flex-col md:flex-row items-center">
+          <div>
+            <h3 class="text-xl md:text-2xl font-bold">
+              An Explainable Approach for Network Intrusion Detection Using
+              Machine Learning and Deep Neural Network [BSc Thesis]
+            </h3>
+            <ul class="list-disc pl-5 text-base md:text-lg text-gray-700">
+              <li>
+                Built a weighted ensemble model for robust classification,
+                integrating SHAP and LIME for explainability.
+              </li>
+              <li>
+                Analyzed the impact of synthetic data on network attack
+                classification performance.
+              </li>
+              <li>
+                Achieved 97.26% accuracy on a multi-class classification task
+                with a low false positive rate of 0.0048.
+              </li>
+            </ul>
+            <a
+              href="https://github.com/sajan-sarker/web-attack-detection"
+              class="text-blue-600 text-base md:text-lg">GitHub Repo</a>
+          </div>
+        </div>
+        <div
+          class="mt-4 md:mt-6 bg-gray-200 p-4 rounded shadow flex flex-col md:flex-row items-center">
+
+          <div>
+            <h3 class="text-xl md:text-2xl font-bold">
+              Pre-trained Transformers for Java-Python Code Translation [BSc
+              Direct Research]
+            </h3>
+            <ul class="list-disc pl-5 text-base md:text-lg text-gray-700">
+              <li>
+                Designed a 2-step Java-to-Python code translation pipeline using
+                CodeT5 for initial translation and PLBART for correction and
+                minimization.
+              </li>
+              <li>
+                Fine-tuned CodeT5 and PLBART models to improve syntactic and
+                semantic accuracy in cross-language code generation.
+              </li>
+              <li>
+                Achieved BLEU score of 51.72 and CodeBLEU of 0.4913 with CodeT5;
+                PLBART refinement step scored 28.92 BLEU and 0.3327 CodeBLEU.
+              </li>
+            </ul>
+            <a
+              href="https://github.com/sajan-sarker/java-python-code-translation"
+              class="text-blue-600 text-base md:text-lg">GitHub Repo</a>
+          </div>
+        </div>
+        <div
+          class="mt-4 md:mt-6 bg-gray-200 p-4 rounded shadow flex flex-col md:flex-row items-center">
+          <div>
+            <h3 class="text-xl md:text-2xl font-bold">
+              Bone Fracture Classification Using Deep Learning
+            </h3>
+            <ul class="list-disc pl-5 text-base md:text-lg text-gray-700">
+              <li>
+                Fine-tuned two pre-trained deep learning models—EfficientNet-B0
+                and VGG16—for binary classification of bone X-ray images into
+                Fractured and Not Fractured.
+              </li>
+              <li>
+                Conducted performance evaluation using classification metrics,
+                with EfficientNet-B0 achieving 99.21% accuracy, outperforming
+                VGG16.
+              </li>
+            </ul>
+            <a
+              href="https://github.com/sajan-sarker/bone-fracture-classifications"
+              class="text-blue-600 text-base md:text-lg">GitHub Repo</a>
+          </div>
+        </div>
+        <div
+          class="mt-4 md:mt-6 bg-gray-200 p-4 rounded shadow flex flex-col md:flex-row items-center">
+          <div>
+            <h3 class="text-xl md:text-2xl font-bold">
+              Malicious URL Classification with Machine Learning
+            </h3>
+            <ul class="list-disc pl-5 text-base md:text-lg text-gray-700">
+              <li>
+                Developed a machine learning-based classifier to identify and
+                categorize malicious URLs.
+              </li>
+              <li>
+                Implemented multiple traditional ML models including Decision
+                Tree, Random Forest, XGBoost, CatBoost, KNN, and a Voting
+                Classifier.
+              </li>
+              <li>
+                Performed URL-based feature extraction, feature engineering, and
+                hyperparameter tuning, achieving a highest accuracy of 93.80%.
+              </li>
+            </ul>
+            <a
+              href="https://github.com/sajan-sarker/Malicious_URL_Classification"
+              class="text-blue-600 text-base md:text-lg">GitHub Repo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="p-6 bg-gray-100">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center">Skills</h2>
+        <p class="mt-4 md:mt-6 text-center text-base md:text-lg">
+          <b>Languages:</b> Python, Java, C/C++, SQL, HTML/CSS.
+        </p>
+        <p class="mt-4 md:mt-6 text-center text-base md:text-lg">
+          <b>Tools:</b> Git & GitHub, LaTeX, MS Office, VS Code, Code::Blocks,
+          PyCharm, MySQL, Eclipse.
+        </p>
+        <p class="mt-4 md:mt-6 text-center text-base md:text-lg">
+          <b>Platforms:</b> GitHub, Google Colab, Jupyter Notebook, Kaggle,
+          Anaconda.
+        </p>
+        <p class="mt-4 md:mt-6 text-center text-base md:text-lg">
+          <b>Libraries & Frameworks:</b> NumPy, Pandas, Matplotlib, Seaborn,
+          Scikit-learn, TensorFlow, PyTorch, Bootstrap.
+        </p>
+        <p class="mt-4 md:mt-6 text-center text-base md:text-lg">
+          <b>Concepts:</b> Machine Learning, Deep Learning, Object Oriented
+          Programming (OOP), Automation Scripting, Troubleshooting & Debugging,
+          Prompt Engineering.
+        </p>
+      </div>
+    </section>
+
+    <section id="certifications" class="p-6 bg-white">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center">
+          Certifications
+        </h2>
+        <div class="mt-4 md:mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="card bg-gray-200 p-4 m-2 rounded shadow">
+            <img
+              src="static/img/Google IT Automation with Python Professional Certificate.jpg"
+              alt="Certificate 1"
+              class="w-full h-32 object-cover mb-2 certificate-img"
+              onclick="openModal(this.src)" />
+            <h3 class="text-lg font-bold">
+              Google IT Automation with Python Professional Certificate
+            </h3>
+            <a
+              href="https://coursera.org/verify/professional-cert/JXMDH70DB3CK"
+              class="text-blue-600 text-base">Credential Link</a>
+          </div>
+
+          <div class="card bg-gray-200 p-4 m-2 rounded shadow">
+            <img
+              src="static/img/Google AI Essentials Certificate.jpg"
+              alt="Certificate 2"
+              class="w-full h-32 object-cover mb-2 certificate-img"
+              onclick="openModal(this.src)" />
+            <h3 class="text-lg font-bold">Google AI Essentials</h3>
+            <a
+              href="https://coursera.org/verify/QJEPIF5AN4VM"
+              class="text-blue-600 text-base">Credential Link</a>
+          </div>
+
+          <div class="card bg-gray-200 p-4 m-2 rounded shadow">
+            <img
+              src="static/img/Meta Programming in Python Certificate.jpg"
+              alt="Certificate 3"
+              class="w-full h-32 object-cover mb-2 certificate-img"
+              onclick="openModal(this.src)" />
+            <h3 class="text-lg font-bold">Meta Programming in Python</h3>
+            <a
+              href="https://coursera.org/verify/JDG6VDMSFU5L"
+              class="text-blue-600 text-base">Credential Link</a>
+          </div>
+          <div class="card bg-gray-200 p-4 m-2 rounded shadow">
+            <img
+              src="static/img/DeepLearning.AI Machine Learning Specialization Coursera Certificate.jpg"
+              alt="Certificate 4"
+              class="w-full h-32 object-cover mb-2 certificate-img"
+              onclick="openModal(this.src)" />
+            <h3 class="text-lg font-bold">
+              DeepLearning.AI Machine Learning Specialization Coursera
+            </h3>
+            <a
+              href="https://coursera.org/verify/specialization/C189OYW5JJRW"
+              class="text-blue-600 text-base">Credential Link</a>
+          </div>
+          <div class="card bg-gray-200 p-4 m-2 rounded shadow">
+            <img
+              src="static/img/CS50 Introduction to Programming with Python Certificate.png"
+              alt="Certificate 5"
+              class="w-full h-32 object-cover mb-2 certificate-img"
+              onclick="openModal(this.src)" />
+            <h3 class="text-lg font-bold">
+              CS50's Introduction to Programming with Python
+            </h3>
+            <a
+              href="https://cs50.harvard.edu/certificates/f08d8bc1-b76e-47d9-a2c6-776264d9cc65"
+              class="text-blue-600 text-base">Credential Link</a>
+          </div>
+          <div class="card bg-gray-200 p-4 m-2 rounded shadow">
+            <img
+              src="static/img/Stanford University Code in Place Certificate.jpg"
+              alt="Certificate 6"
+              class="w-full h-32 object-cover mb-2 certificate-img"
+              onclick="openModal(this.src)" />
+            <h3 class="text-lg font-bold">
+              Stanford University's Code in Place
+            </h3>
+            <a
+              href="https://codeinplace.stanford.edu/cip4/certificate/11gxkv"
+              class="text-blue-600 text-base">Credential Link</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="p-6 bg-gray-100">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center">CONTACT</h2>
+        <p class="mt-4 md:mt-6 text-gray-600 text-center text-base md:text-lg">
+          I have got just what you need. Let's talk.
+        </p>
+        <div class="mt-4 md:mt-6 flex justify-center space-x-4 flex-wrap">
+          <p class="text-base md:text-lg">Call +880 1722-425426 |</p>
+          <p class="text-base md:text-lg">
+            <a
+              href="mailto:sajansarker47@gmail.com"
+              class="text-blue-600 hover:underline">
+              sajansarker47@gmail.com
+            </a>
+          </p>
+          <p class="text-base md:text-lg">| Uttara, Dhaka, Bangladesh</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white p-4 text-center">
+      <div class="max-w-4xl mx-auto px-4">
+        <p class="text-base md:text-lg">
+          © 2025 Sajan Kumer Sarker. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Modal for Certificate Preview -->
+    <div id="imgModal" class="modal">
+      <span class="modal-close" id="modalClose">&times;</span>
+      <img id="modalImage" src alt="Preview" />
+    </div>
+
+    <script src="static/js/script.js"></script>
+  </body>
+</html>
