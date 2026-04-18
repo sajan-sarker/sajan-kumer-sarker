@@ -104,11 +104,10 @@
             class="inline-block bg-black text-white px-3 py-1 rounded-full text-sm font-semibold">It's me</span>
           <h1 class="text-4xl md:text-5xl font-bold">Sajan Kumer Sarker</h1>
           <p class="text-xl text-gray-700 font-semibold">
-            Machine Learning | Deep Learning | Large Language Models
+            Machine Learning | Deep Learning | Large Language Models | AI Agents
           </p>
           <p class="text-gray-600">
-            Fresh CSE Graduate from North South University passionate about
-            Artificial Intelligence.
+            AI & Machine Learning Enthusiast.
           </p>
 
           <div class="flex justify-center space-x-4 mt-2 text-2xl">
@@ -171,7 +170,7 @@
         </p>
         <div class="mt-4 md:mt-6 p-4 bg-gray-50 rounded shadow">
           <p class="text-base md:text-lg">
-            Fresh CSE graduate with a strong foundation in Software Engineering and Artificial Intelligence, with a growing interest in the intersection of AI and Cybersecurity. Passionate about building intelligent, secure systems and exploring applications of Machine Learning and Large Language Models (LLMs) in real-world scenarios. <br>
+            CSE graduate with a strong foundation in Software Engineering and Artificial Intelligence, with a growing interest in the intersection of AI and Cybersecurity. Passionate about building intelligent, secure systems and exploring applications of Machine Learning and Large Language Models (LLMs) in real-world scenarios. <br>
             I'm currently expanding my knowledge in AI-driven security, threat detection, and LLM through hands-on practice and online learning. Seeking an entry-level role or internship in AI, ML, Software Engineering or Cybersecurity where I can contribute meaningfully to real-world projects, continue learning, and grow professionally.
           </p>
         </div>
@@ -220,6 +219,88 @@
     <section id="projects" class="p-6 bg-white">
       <div class="max-w-4xl mx-auto px-4">
         <h2 class="text-2xl md:text-3xl font-bold text-center">Projects</h2>
+        
+        <div
+          class="mt-4 md:mt-6 bg-gray-200 p-4 rounded shadow flex flex-col md:flex-row items-center">
+          <div>
+            <h3 class="text-xl md:text-2xl font-bold">
+              CyberSec-Reasoner – A Three-Stage Post-Trained Reasoning LLM for Vulnerability Analysis
+            </h3>
+            <ul class="list-disc pl-5 text-base md:text-lg text-gray-700">
+              <li>
+                Engineered a domain-specialized LLM based on Qwen 3.5 (4B) designed to perform explicit Chain-of-Thought (CoT) reasoning for cybersecurity tasks, such as automated CVE-to-CWE mapping.
+              </li>
+              <li>
+                Architected a three-stage post-training pipeline featuring Knowledge-Based SFT for domain expertise, Cold Start SFT for reasoning structure, and Reinforcement Learning via Group Relative Policy Optimization (GRPO) for logical refinement.
+              </li>
+              <li>
+                Developed a weighted hybrid reward system (Total Reward = 0.5 · Rcwe + 0.3 · Rformat + 0.2 · Rkeyword) to optimize for classification accuracy and semantic grounding, validating the model against a 1,000-sample CVE/CWE dataset using custom rule-based metrics.
+              </li>
+              <li>
+                <b>Tools & Framework:</b> PyTorch, Transformers, TRL, Hugging Face PEFT, LoRA, QLoRA, GRPO, Qwen 3.5, Wandb.
+              </li>
+            </ul>
+            <a
+              href="https://github.com/sajan-sarker/CyberSec-Reasoner"
+              class="text-blue-600 text-base md:text-lg">GitHub Repo</a>
+          </div>
+        </div>
+
+        <div
+          class="mt-4 md:mt-6 bg-gray-200 p-4 rounded shadow flex flex-col md:flex-row items-center">
+          <div>
+            <h3 class="text-xl md:text-2xl font-bold">
+              SPIRICHAT – A RAG-Based Q&A Chatbot
+            </h3>
+            <ul class="list-disc pl-5 text-base md:text-lg text-gray-700">
+              <li>
+                Developed an RAG-based chatbot system focused on answering questions about supernatural topics (e.g., ghosts, demons, vampires) by retrieving relevant context from uploaded documents and generating natural language responses using OpenAI GPT-3.5 API
+              </li>
+              <li>
+                Designed the backend using Flask to handle document ingestion, context cleaning, embedding generation via Hugging Face models, vector storage with Pinecone, and response generation through LangChain.
+              </li>
+              <li>
+                Built a responsive, full-screen chat interface using HTML, CSS, and JavaScript, supporting dynamic user interactions, context-aware replies, and persistent chat history across sessions.
+              </li>
+              <li>
+                <b>Tools & Framework:</b> LangChain, Generative AI, OpenAI API, HuggingFace, Pinecone.
+              </li>
+            </ul>
+            <a
+              href="https://github.com/sajan-sarker/Spirichat"
+              class="text-blue-600 text-base md:text-lg">GitHub Repo</a>
+          </div>
+        </div>
+
+        <div
+          class="mt-4 md:mt-6 bg-gray-200 p-4 rounded shadow flex flex-col md:flex-row items-center">
+          <div>
+            <h3 class="text-xl md:text-2xl font-bold">
+              Multi-lingual YouTube Comment Sentiment & Type Analysis
+            </h3>
+            <ul class="list-disc pl-5 text-base md:text-lg text-gray-700">
+              <li>
+                Designed and implemented a complete multilingual NLP pipeline centered on XLM-RoBERTa for sentiment and comment-type classification across Bangla, English, and Romanized Bangla.
+              </li>
+              <li>
+                Automated dataset creation using YouTube Data API and LLM-based labeling (Qwen2.5-14B) via prompt-driven JSON extraction, eliminating manual annotation.
+              </li>
+              <li>
+                Trained and evaluated multiple models including TF-IDF + MLP, LSTM/BiLSTM, and XLM-RoBERTa, achieving up to 76.68% sentiment and 76.05% type accuracy on test data.
+              </li>
+              <li>
+                Developed a FastAPI-based backend with REST endpoints and a web UI to analyze single comments or entire videos, with automated plots, and confidence visualizations.
+              </li>
+              <li>
+                <b>Tools & Framework:</b> Scikit-learn, PyTorch, Hugging Face Transformers, FastAPI, PostgreSQL, Postman.
+              </li>
+            </ul>
+            <a
+              href="https://github.com/sajan-sarker/Youtube_Comment_Sentiments_-_Type_Analysis"
+              class="text-blue-600 text-base md:text-lg">GitHub Repo</a>
+          </div>
+        </div>
+
         <div
           class="mt-4 md:mt-6 bg-gray-200 p-4 rounded shadow flex flex-col md:flex-row items-center">
           <div>
@@ -274,32 +355,6 @@
             </ul>
             <a
               href="https://github.com/sajan-sarker/java-python-code-translation"
-              class="text-blue-600 text-base md:text-lg">GitHub Repo</a>
-          </div>
-        </div>
-        
-        <div
-          class="mt-4 md:mt-6 bg-gray-200 p-4 rounded shadow flex flex-col md:flex-row items-center">
-          <div>
-            <h3 class="text-xl md:text-2xl font-bold">
-              SPIRICHAT – A RAG-Based Q&A Chatbot
-            </h3>
-            <ul class="list-disc pl-5 text-base md:text-lg text-gray-700">
-              <li>
-                Developed an RAG-based chatbot system focused on answering questions about supernatural topics (e.g., ghosts, demons, vampires) by retrieving relevant context from uploaded documents and generating natural language responses using OpenAI GPT-3.5 API
-              </li>
-              <li>
-                Designed the backend using Flask to handle document ingestion, context cleaning, embedding generation via Hugging Face models, vector storage with Pinecone, and response generation through LangChain.
-              </li>
-              <li>
-                Built a responsive, full-screen chat interface using HTML, CSS, and JavaScript, supporting dynamic user interactions, context-aware replies, and persistent chat history across sessions.
-              </li>
-              <li>
-                <b>Tools & Framework:</b> LangChain, Generative AI, OpenAI API, HuggingFace, Pinecone.
-              </li>
-            </ul>
-            <a
-              href="https://github.com/sajan-sarker/Spirichat"
               class="text-blue-600 text-base md:text-lg">GitHub Repo</a>
           </div>
         </div>
@@ -370,20 +425,18 @@
         </p>
         <p class="mt-4 md:mt-6 text-center text-base md:text-lg">
           <b>Tools:</b> Git & GitHub, LaTeX, MS Office, VS Code, Code::Blocks,
-          PyCharm, MySQL, Eclipse.
+          PyCharm, MySQL, PostgreSQL, Eclipse, Postman.
         </p>
         <p class="mt-4 md:mt-6 text-center text-base md:text-lg">
           <b>Platforms:</b> GitHub, Google Colab, Jupyter Notebook, Kaggle,
-          Anaconda.
+          Anaconda, Qandb.
         </p>
         <p class="mt-4 md:mt-6 text-center text-base md:text-lg">
           <b>Libraries & Frameworks:</b> NumPy, Pandas, Matplotlib, Seaborn,
-          Scikit-learn, TensorFlow, PyTorch, Bootstrap.
+          Scikit-learn, TensorFlow, PyTorch, Transformers, LangChain, FastAPI.
         </p>
         <p class="mt-4 md:mt-6 text-center text-base md:text-lg">
-          <b>Concepts:</b> Machine Learning, Deep Learning, Object Oriented
-          Programming (OOP), Automation Scripting, Troubleshooting & Debugging,
-          Prompt Engineering.
+          <b>Concepts:</b> Machine Learning (ML), Deep Learning (DL), Natural Language Processing (NLP), Large Language Models (LLM), Generative AI, Agentic AI, Object-Oriented Programming (OOP), Troubleshooting & Debugging, Prompt Engineering.
         </p>
       </div>
     </section>
@@ -396,8 +449,21 @@
         <div class="mt-4 md:mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
           <div class="card bg-gray-200 p-4 m-2 rounded shadow">
             <img
-              src="static/img/Google IT Automation with Python Professional Certificate.jpg"
+              src="static/img/Associate AI Engineer for Developers Certificate.jpg"
               alt="Certificate 1"
+              class="w-full h-32 object-cover mb-2 certificate-img"
+              onclick="openModal(this.src)" />
+            <h3 class="text-lg font-bold">
+              Associate AI Engineer for Developers
+            </h3>
+            <a
+              href="https://www.datacamp.com/completed/statement-of-accomplishment/track/acb8e446250a6fde9754bde933b685a67aa2c000"
+              class="text-blue-600 text-base">Credential Link</a>
+          </div>
+          <div class="card bg-gray-200 p-4 m-2 rounded shadow">
+            <img
+              src="static/img/Google IT Automation with Python Professional Certificate.jpg"
+              alt="Certificate 2"
               class="w-full h-32 object-cover mb-2 certificate-img"
               onclick="openModal(this.src)" />
             <h3 class="text-lg font-bold">
@@ -411,7 +477,7 @@
           <div class="card bg-gray-200 p-4 m-2 rounded shadow">
             <img
               src="static/img/Google AI Essentials Certificate.jpg"
-              alt="Certificate 2"
+              alt="Certificate 3"
               class="w-full h-32 object-cover mb-2 certificate-img"
               onclick="openModal(this.src)" />
             <h3 class="text-lg font-bold">Google AI Essentials</h3>
@@ -423,7 +489,7 @@
           <div class="card bg-gray-200 p-4 m-2 rounded shadow">
             <img
               src="static/img/Meta Programming in Python Certificate.jpg"
-              alt="Certificate 3"
+              alt="Certificate 4"
               class="w-full h-32 object-cover mb-2 certificate-img"
               onclick="openModal(this.src)" />
             <h3 class="text-lg font-bold">Meta Programming in Python</h3>
@@ -434,7 +500,7 @@
           <div class="card bg-gray-200 p-4 m-2 rounded shadow">
             <img
               src="static/img/DeepLearning.AI Machine Learning Specialization Coursera Certificate.jpg"
-              alt="Certificate 4"
+              alt="Certificate 5"
               class="w-full h-32 object-cover mb-2 certificate-img"
               onclick="openModal(this.src)" />
             <h3 class="text-lg font-bold">
@@ -447,7 +513,7 @@
           <div class="card bg-gray-200 p-4 m-2 rounded shadow">
             <img
               src="static/img/CS50 Introduction to Programming with Python Certificate.png"
-              alt="Certificate 5"
+              alt="Certificate 6"
               class="w-full h-32 object-cover mb-2 certificate-img"
               onclick="openModal(this.src)" />
             <h3 class="text-lg font-bold">
@@ -460,7 +526,7 @@
           <div class="card bg-gray-200 p-4 m-2 rounded shadow">
             <img
               src="static/img/Stanford University Code in Place Certificate.jpg"
-              alt="Certificate 6"
+              alt="Certificate 7"
               class="w-full h-32 object-cover mb-2 certificate-img"
               onclick="openModal(this.src)" />
             <h3 class="text-lg font-bold">
@@ -497,7 +563,7 @@
     <footer class="bg-gray-800 text-white p-4 text-center">
       <div class="max-w-4xl mx-auto px-4">
         <p class="text-base md:text-lg">
-          © 2025 Sajan Kumer Sarker. All rights reserved.
+          © 2026 Sajan Kumer Sarker. All rights reserved.
         </p>
       </div>
     </footer>
