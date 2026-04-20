@@ -3,575 +3,458 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sajan Kumer Sarker</title>
+    <title>Sajan Kumer Sarker | AI/ML Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="static/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   </head>
-  <body class="font-sans">
-    <nav class="bg-gray-800 text-white p-4 fixed w-full z-10">
-      <div class="max-w-4xl mx-auto">
-        <div class="flex justify-center">
-          <ul class="flex space-x-6">
+  <body class="font-sans antialiased">
+    <nav class="site-nav fixed top-0 w-full z-30">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="h-16 flex items-center justify-between">
+          <a href="#home" class="brand">Sajan Sarker</a>
+          <ul class="hidden md:flex items-center gap-2">
+            <li><a href="#home" data-section="home" class="nav-link">Home</a></li>
+            <li><a href="#about" data-section="about" class="nav-link">About</a></li>
             <li>
-              <a
-                href="#home"
-                data-section="home"
-                class="nav-link hover:text-gray-300">Home</a>
+              <a href="#educations" data-section="educations" class="nav-link">Education</a>
             </li>
             <li>
-              <a
-                href="#about"
-                data-section="about"
-                class="nav-link hover:text-gray-300">About</a>
+              <a href="#projects" data-section="projects" class="nav-link">Projects</a>
             </li>
-            <li>
-              <a
-                href="#educations"
-                data-section="educations"
-                class="nav-link hover:text-gray-300">Educations</a>
-            </li>
-            <li>
-              <a
-                href="#projects"
-                data-section="projects"
-                class="nav-link hover:text-gray-300">Projects</a>
-            </li>
-            <li>
-              <a
-                href="#skills"
-                data-section="skills"
-                class="nav-link hover:text-gray-300">Skills</a>
-            </li>
+            <li><a href="#skills" data-section="skills" class="nav-link">Skills</a></li>
             <li>
               <a
                 href="#certifications"
                 data-section="certifications"
-                class="nav-link hover:text-gray-300">Certifications</a>
+                class="nav-link">Certificates</a>
             </li>
             <li>
-              <a
-                href="#contact"
-                data-section="contact"
-                class="nav-link hover:text-gray-300">Contact</a>
+              <a href="#contact" data-section="contact" class="nav-link">Contact</a>
             </li>
           </ul>
+
+          <button
+            id="menu-toggle"
+            class="md:hidden text-slate-100 hover:text-white p-2"
+            aria-label="Toggle mobile menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
         </div>
       </div>
-      <!-- Mobile Menu Button -->
-      <div class="md:hidden flex justify-end pr-4">
-        <button id="menu-toggle" class="text-white focus:outline-none">
-          <svg
-            class="h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
-      </div>
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden bg-gray-800 text-white p-4 absolute w-full top-16">
-        <ul class="flex flex-col space-y-2">
-          <li><a href="#home" class="hover:text-gray-300">Home</a></li>
-          <li><a href="#about" class="hover:text-gray-300">About</a></li>
-          <li>
-            <a href="#educations" class="hover:text-gray-300">Educations</a>
-          </li>
-          <li><a href="#projects" class="hover:text-gray-300">Projects</a></li>
-          <li><a href="#skills" class="hover:text-gray-300">Skills</a></li>
-          <li>
-            <a href="#certifications" class="hover:text-gray-300">Certifications</a>
-          </li>
-          <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
-        </ul>
+
+      <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+        <div class="mobile-menu-inner">
+          <a href="#home" data-section="home" class="mobile-nav-link">Home</a>
+          <a href="#about" data-section="about" class="mobile-nav-link">About</a>
+          <a href="#educations" data-section="educations" class="mobile-nav-link">Education</a>
+          <a href="#projects" data-section="projects" class="mobile-nav-link">Projects</a>
+          <a href="#skills" data-section="skills" class="mobile-nav-link">Skills</a>
+          <a
+            href="#certifications"
+            data-section="certifications"
+            class="mobile-nav-link">Certificates</a>
+          <a href="#contact" data-section="contact" class="mobile-nav-link">Contact</a>
+        </div>
       </div>
     </nav>
 
-    <section id="home" class="pt-20 bg-gray-100">
-      <div
-        class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
-        <!-- Text Column -->
-        <div class="md:w-1/2 space-y-4">
-          <span
-            class="inline-block bg-black text-white px-3 py-1 rounded-full text-sm font-semibold">It's me</span>
-          <h1 class="text-4xl md:text-5xl font-bold">Sajan Kumer Sarker</h1>
-          <p class="text-xl text-gray-700 font-semibold">
-            Machine Learning | Deep Learning | Large Language Models | AI Agents
-          </p>
-          <p class="text-gray-600">
-            AI & Machine Learning Enthusiast.
-          </p>
+    <main>
+      <section id="home" class="hero-section">
+        <div class="max-w-6xl mx-auto px-4 py-24 md:py-28">
+          <div class="grid md:grid-cols-2 items-center gap-12">
+            <div class="space-y-5 reveal">
+              <span class="hero-chip">AI/ML Portfolio</span>
+              <h1 class="text-4xl md:text-6xl font-bold text-slate-100 leading-tight">
+                Sajan Kumer Sarker
+              </h1>
+              <p class="text-lg md:text-xl text-slate-200 font-medium">
+                Machine Learning | Deep Learning | LLM | AI Agents | Cybersecurity
+              </p>
+              <p class="text-slate-300 max-w-2xl">
+                CSE graduate and aspiring AI engineer focused on building intelligent,
+                secure, and practical solutions for real-world use cases.
+              </p>
 
-          <div class="flex justify-center space-x-4 mt-2 text-2xl">
-            <a
-              href="https://facebook.com/ssajan.sarker"
-              target="_blank"
-              aria-label="Facebook">
-              <i class="fab fa-facebook hover:text-blue-700"></i>
-            </a>
-            <a
-              href="https://instagram.com/sajan_sarker"
-              target="_blank"
-              aria-label="Instagram">
-              <i class="fab fa-instagram hover:text-pink-500"></i>
-            </a>
-            <a
-              href="https://twitter.com/sajan_sarker3"
-              target="_blank"
-              aria-label="Twitter">
-              <i class="fab fa-x-twitter hover:text-gray-500"></i>
-            </a>
-            <a
-              href="https://linkedin.com/in/sajan-sarker"
-              target="_blank"
-              aria-label="LinkedIn">
-              <i class="fab fa-linkedin hover:text-blue-700"></i>
-            </a>
-            <a
-              href="https://github.com/sajan-sarker"
-              target="_blank"
-              aria-label="GitHub">
-              <i class="fab fa-github hover:text-gray-700"></i>
-            </a>
+              <div class="flex items-center gap-4 text-2xl pt-1 social-links">
+                <a href="https://facebook.com/sajan.k.sarker" target="_blank" aria-label="Facebook">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a
+                  href="https://instagram.com/sajan_sarker"
+                  target="_blank"
+                  aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/sajan_sarker3" target="_blank" aria-label="Twitter">
+                  <i class="fab fa-x-twitter"></i>
+                </a>
+                <a
+                  href="https://linkedin.com/in/sajan-sarker"
+                  target="_blank"
+                  aria-label="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/sajan-sarker" target="_blank" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+
+              <div class="flex flex-wrap gap-3 pt-2">
+                <a href="#projects" class="btn-primary">View Projects</a>
+                <a href="#contact" class="btn-secondary">Let's Talk</a>
+              </div>
+            </div>
+
+            <div class="flex justify-center reveal">
+              <div class="profile-wrap">
+                <img
+                  src="static/img/profile-illustration.png"
+                  alt="Sajan Kumer Sarker profile"
+                  class="profile-image" />
+              </div>
+            </div>
           </div>
-
-          <a href="#contact">
-            <button
-              class="mt-4 bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full text-lg font-semibold shadow">
-              let's talk
-            </button>
-          </a>
         </div>
+      </section>
 
-        <!-- Image Column -->
-        <div class="md:w-1/3 flex justify-center">
-          <img
-            src="static/img/profile-illustration.png"
-            alt="Profile Photo"
-            class="w-64 h-64 object-cover rounded-full border-4 border-gray-300 shadow-lg" />
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="p-6 bg-white">
-      <div class="max-w-4xl mx-auto px-4">
-        <h2 class="text-2xl md:text-3xl font-bold text-center">About Me</h2>
-        <p class="mt-4 md:mt-6 text-gray-600 text-center text-base md:text-lg">
-          Aspiring AI engineer eager to build smart solutions through machine
-          learning and software development
-        </p>
-        <div class="mt-4 md:mt-6 p-4 bg-gray-50 rounded shadow">
-          <p class="text-base md:text-lg">
-            CSE graduate with a strong foundation in Software Engineering and Artificial Intelligence, with a growing interest in the intersection of AI and Cybersecurity. Passionate about building intelligent, secure systems and exploring applications of Machine Learning and Large Language Models (LLMs) in real-world scenarios. <br>
-            I'm currently expanding my knowledge in AI-driven security, threat detection, and LLM through hands-on practice and online learning. Seeking an entry-level role or internship in AI, ML, Software Engineering or Cybersecurity where I can contribute meaningfully to real-world projects, continue learning, and grow professionally.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="educations" class="p-6 bg-gray-100">
-      <div class="max-w-4xl mx-auto px-4">
-        <h2 class="text-2xl md:text-3xl font-bold text-center">Educations</h2>
-        <div class="mt-4 md:mt-6 flex flex-col space-y-4">
-          <div class="card bg-gray-50 p-4 m-2 rounded shadow w-full">
-            <h3 class="text-lg md:text-xl font-bold">
-              Bachelor of Science in Computer Science and Engineering (BSCSE)
-            </h3>
-            <p>North South University, Dhaka, Bangladesh</p>
-            <p>February 2021 - July 2025</p>
-            <p class="text-base md:text-lg">CGPA 3.04 out of 4.00</p>
-            <p class="text-base md:text-lg">
-              Relevant Coursework: Data Structures & Algorithms, Software
-              Engineering, Advance Database, Machine Learning, and Deep
-              Learning.
+      <section id="about" class="section-wrapper">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2>About Me</h2>
+          <div class="content-card reveal">
+            <p class="text-base md:text-lg leading-relaxed text-slate-700">
+              CSE graduate with a strong foundation in software engineering and artificial
+              intelligence, with a growing interest in the intersection of AI and
+              cybersecurity. Passionate about building intelligent and secure systems,
+              and exploring machine learning and large language model applications in
+              real-world scenarios.
+            </p>
+            <p class="text-base md:text-lg leading-relaxed text-slate-700 mt-4">
+              Currently expanding my expertise in AI-driven security, threat detection,
+              and practical LLM development through hands-on projects and continuous
+              online learning. Looking for an entry-level role or internship in AI, ML,
+              software engineering, or cybersecurity.
             </p>
           </div>
-          <div class="card bg-gray-50 p-4 m-2 rounded shadow w-full">
-            <h3 class="text-lg md:text-xl font-bold">
-              Higher Secondary Certificate (HSC)
-            </h3>
-            <p>Nawab Habibullah Model School and College</p>
-            <p>May 2017 - July 2019</p>
-            <p class="text-base md:text-lg">GPA 4.67 out of 5.00</p>
-            <p class="text-base md:text-lg">Group - Science</p>
-          </div>
-          <div class="card bg-gray-50 p-4 m-2 rounded shadow w-full">
-            <h3 class="text-lg md:text-xl font-bold">
-              Secondary Secondary Certificate (SSC)
-            </h3>
-            <p>Baunia Abdul Jalil High School</p>
-            <p>May 2017 - July 2019</p>
-            <p class="text-base md:text-lg">GPA 4.68 out of 5.00</p>
-            <p class="text-base md:text-lg">Group - Science</p>
+        </div>
+      </section>
+
+      <section id="educations" class="section-wrapper section-alt">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2>Education</h2>
+          <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            <article class="card reveal">
+              <h3 class="card-title">B.Sc. in Computer Science and Engineering</h3>
+              <p>North South University, Dhaka, Bangladesh</p>
+              <p>February 2021 - July 2025</p>
+              <p class="font-semibold text-slate-800">CGPA: 3.04 / 4.00</p>
+              <p>
+                Relevant coursework: Data Structures and Algorithms, Software Engineering,
+                Advanced Database, Machine Learning, Deep Learning.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h3 class="card-title">Higher Secondary Certificate (HSC)</h3>
+              <p>Nawab Habibullah Model School and College</p>
+              <p>May 2017 - July 2019</p>
+              <p class="font-semibold text-slate-800">GPA: 4.67 / 5.00</p>
+              <p>Group: Science</p>
+            </article>
+            <article class="card reveal">
+              <h3 class="card-title">Secondary School Certificate (SSC)</h3>
+              <p>Baunia Abdul Jalil High School</p>
+              <p>May 2017 - July 2019</p>
+              <p class="font-semibold text-slate-800">GPA: 4.68 / 5.00</p>
+              <p>Group: Science</p>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="projects" class="p-6 bg-white">
-      <div class="max-w-4xl mx-auto px-4">
-        <h2 class="text-2xl md:text-3xl font-bold text-center">Projects</h2>
-        
-        <div
-          class="mt-4 md:mt-6 bg-gray-200 p-4 rounded shadow flex flex-col md:flex-row items-center">
-          <div>
-            <h3 class="text-xl md:text-2xl font-bold">
-              CyberSec-Reasoner – A Three-Stage Post-Trained Reasoning LLM for Vulnerability Analysis
-            </h3>
-            <ul class="list-disc pl-5 text-base md:text-lg text-gray-700">
-              <li>
-                Engineered a domain-specialized LLM based on Qwen 3.5 (4B) designed to perform explicit Chain-of-Thought (CoT) reasoning for cybersecurity tasks, such as automated CVE-to-CWE mapping.
-              </li>
-              <li>
-                Architected a three-stage post-training pipeline featuring Knowledge-Based SFT for domain expertise, Cold Start SFT for reasoning structure, and Reinforcement Learning via Group Relative Policy Optimization (GRPO) for logical refinement.
-              </li>
-              <li>
-                Developed a weighted hybrid reward system (Total Reward = 0.5 · Rcwe + 0.3 · Rformat + 0.2 · Rkeyword) to optimize for classification accuracy and semantic grounding, validating the model against a 1,000-sample CVE/CWE dataset using custom rule-based metrics.
-              </li>
-              <li>
-                <b>Tools & Framework:</b> PyTorch, Transformers, TRL, Hugging Face PEFT, LoRA, QLoRA, GRPO, Qwen 3.5, Wandb.
-              </li>
-            </ul>
-            <a
-              href="https://github.com/sajan-sarker/CyberSec-Reasoner"
-              class="text-blue-600 text-base md:text-lg">GitHub Repo</a>
+      <section id="projects" class="section-wrapper">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2>Selected Projects</h2>
+          <div class="space-y-6">
+            <article class="project-card reveal">
+              <h3>CyberSec-Reasoner – A Three-Stage Post-Trained Reasoning LLM for Vulnerability Analysis</h3>
+              <ul>
+                <li>
+                  Engineered a domain-specialized LLM based on Qwen 3.5 (4B) designed to perform explicit Chain-of-Thought (CoT) reasoning for cybersecurity tasks, such as automated CVE-to-CWE mapping.
+                </li>
+                <li>
+                  Architected a three-stage post-training pipeline featuring Knowledge-Based SFT for domain expertise, Cold Start SFT for reasoning structure, and Reinforcement Learning via Group Relative Policy Optimization (GRPO) for logical refinement.
+                </li>
+                <li>
+                  Developed a weighted hybrid reward system (Total Reward = 0.5 · Rcwe + 0.3 · Rformat + 0.2 · Rkeyword) to optimize for classification accuracy and semantic grounding, validating the model against a 1,000-sample CVE/CWE dataset using custom rule-based metrics.
+                </li>
+                <li>
+                  <strong>Tools:</strong> PyTorch, Transformers, TRL, Hugging Face PEFT,
+                  LoRA, QLoRA, GRPO, Qwen 3.5, Wandb.
+                </li>
+              </ul>
+              <a href="https://github.com/sajan-sarker/CyberSec-Reasoner" target="_blank"
+                >GitHub Repository</a>
+            </article>
+
+            <article class="project-card reveal">
+              <h3>SPIRICHAT - RAG-Based Q&A Chatbot</h3>
+              <ul>
+                <li>
+                  Developed an RAG-based chatbot system focused on answering questions about supernatural topics (e.g., ghosts, demons, vampires) by retrieving relevant context from uploaded documents and generating natural language responses using OpenAI GPT-3.5 API.
+                </li>
+                <li>
+                  Designed the backend using Flask to handle document ingestion, context cleaning, embedding generation via Hugging Face models, vector storage with Pinecone, and response generation through LangChain.
+                </li>
+                <li>
+                  Built a responsive, full-screen chat interface using HTML, CSS, and JavaScript, supporting dynamic user interactions, context-aware replies, and persistent chat history across sessions.
+                </li>
+                <li>
+                  <strong>Tools:</strong> LangChain, Generative AI, OpenAI API, Hugging Face, Pinecone.
+                </li>
+              </ul>
+              <a href="https://github.com/sajan-sarker/Spirichat" target="_blank">GitHub Repository</a>
+            </article>
+
+            <article class="project-card reveal">
+              <h3>Multi-lingual YouTube Comment Sentiment & Type Analysis</h3>
+              <ul>
+                <li>
+                  Designed and implemented a complete multilingual NLP pipeline centered on XLM-RoBERTa for sentiment and comment-type classification across Bangla, English, and Romanized Bangla.
+                </li>
+                <li>
+                  Automated dataset creation using YouTube Data API and LLM-based labeling (Qwen2.5-14B) via prompt-driven JSON extraction, eliminating manual annotation.
+                </li>
+                <li>
+                  Trained and evaluated multiple models including TF-IDF + MLP, LSTM/BiLSTM, and XLM-RoBERTa, achieving up to 76.68% sentiment and 76.05% type accuracy on test data.
+                </li>
+                <li>
+                  Developed a FastAPI-based backend with REST endpoints and a web UI to analyze single comments or entire videos, with automated plots, and confidence visualizations.
+                </li>
+                <li>
+                  <strong>Tools:</strong> Scikit-learn, PyTorch, Hugging Face Transformers, FastAPI, PostgreSQL, Postman.
+                </li>
+              </ul>
+              <a
+                href="https://github.com/sajan-sarker/Youtube_Comment_Sentiments_-_Type_Analysis"
+                target="_blank">GitHub Repository</a>
+            </article>
+
+            <article class="project-card reveal">
+              <h3>An Explainable Approach for Network Intrusion Detection Using Machine Learning and Deep Neural Network [BSc Thesis]</h3>
+              <ul>
+                <li>
+                  Built a weighted ensemble model for robust classification, integrating SHAP and LIME for explainability.
+                </li>
+                <li>
+                  Analyzed the impact of synthetic data on network attack classification performance.
+                </li>
+                <li>
+                  Achieved 97.26% accuracy on a multi-class classification task with a low false positive rate of 0.0048.
+                </li>
+                <li><strong>Tools:</strong> Machine Learning, Data Analysis, Scikit-Learn, Explainable AI, PyTorch.</li>
+              </ul>
+              <a href="https://github.com/sajan-sarker/web-attack-detection" target="_blank"
+                >GitHub Repository</a>
+            </article>
+
+            <article class="project-card reveal">
+              <h3>Pre-trained Transformers for Java-Python Code Translation [BSc Direct Research]</h3>
+              <ul>
+                <li>
+                  Designed a 2-step Java-to-Python code translation pipeline using CodeT5 for initial translation and PLBART for correction and minimization.
+                </li>
+                <li>
+                  Fine-tuned CodeT5 and PLBART models to improve syntactic and semantic accuracy in cross-language code generation.
+                </li>
+                <li>
+                  Achieved BLEU score of 51.72 and CodeBLEU of 0.4913 with CodeT5; PLBART refinement step scored 28.92 BLEU and 0.3327 CodeBLEU.
+                </li>
+                <li><strong>Tools:</strong> PyTorch, Hugging Face Transformers, NLP.</li>
+              </ul>
+              <a
+                href="https://github.com/sajan-sarker/java-python-code-translation"
+                target="_blank">GitHub Repository</a>
+            </article>
+
+            <article class="project-card reveal">
+              <h3>Bone Fracture Classification Using Deep Learning</h3>
+              <ul>
+                <li>
+                  Fine-tuned two pre-trained deep learning models—EfficientNet-B0 and VGG16—for binary classification of bone X-ray images into Fractured and Not Fractured.
+                </li>
+                <li>
+                  Conducted performance evaluation using classification metrics, with EfficientNet-B0 achieving 99.21% accuracy, outperforming VGG16.
+                </li>
+                <li><strong>Tools:</strong> PyTorch, Transfer Learning, Deep Learning.</li>
+              </ul>
+              <a
+                href="https://github.com/sajan-sarker/bone-fracture-classifications"
+                target="_blank">GitHub Repository</a>
+            </article>
+
+            <article class="project-card reveal">
+              <h3>Malicious URL Classification with Machine Learning</h3>
+              <ul>
+                <li>
+                  Developed a machine learning-based classifier to identify and categorize malicious URLs.
+                </li>
+                <li>
+                  Implemented multiple traditional ML models including Decision Tree, Random Forest, XGBoost, CatBoost, KNN, and a Voting Classifier.
+                </li>
+                <li>
+                  Performed URL-based feature extraction, feature engineering, and hyperparameter tuning, achieving a highest accuracy of 93.80%.
+                </li>
+                <li><strong>Tools:</strong> Scikit-learn, Data Analysis, Machine Learning.</li>
+              </ul>
+              <a
+                href="https://github.com/sajan-sarker/Malicious_URL_Classification"
+                target="_blank">GitHub Repository</a>
+            </article>
           </div>
         </div>
+      </section>
 
-        <div
-          class="mt-4 md:mt-6 bg-gray-200 p-4 rounded shadow flex flex-col md:flex-row items-center">
-          <div>
-            <h3 class="text-xl md:text-2xl font-bold">
-              SPIRICHAT – A RAG-Based Q&A Chatbot
-            </h3>
-            <ul class="list-disc pl-5 text-base md:text-lg text-gray-700">
-              <li>
-                Developed an RAG-based chatbot system focused on answering questions about supernatural topics (e.g., ghosts, demons, vampires) by retrieving relevant context from uploaded documents and generating natural language responses using OpenAI GPT-3.5 API
-              </li>
-              <li>
-                Designed the backend using Flask to handle document ingestion, context cleaning, embedding generation via Hugging Face models, vector storage with Pinecone, and response generation through LangChain.
-              </li>
-              <li>
-                Built a responsive, full-screen chat interface using HTML, CSS, and JavaScript, supporting dynamic user interactions, context-aware replies, and persistent chat history across sessions.
-              </li>
-              <li>
-                <b>Tools & Framework:</b> LangChain, Generative AI, OpenAI API, HuggingFace, Pinecone.
-              </li>
-            </ul>
-            <a
-              href="https://github.com/sajan-sarker/Spirichat"
-              class="text-blue-600 text-base md:text-lg">GitHub Repo</a>
+      <section id="skills" class="section-wrapper section-alt">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2>Skills</h2>
+          <div class="grid md:grid-cols-2 gap-5">
+            <article class="card reveal">
+              <h3 class="card-title">Core Stack</h3>
+              <p><strong>Languages:</strong> Python, Java, C/C++, SQL, HTML/CSS</p>
+              <p>
+                <strong>Libraries and Frameworks:</strong> NumPy, Pandas, Matplotlib,
+                Seaborn, Scikit-learn, TensorFlow, PyTorch, Transformers, LangChain, FastAPI, OpenAI API
+              </p>
+              <p>
+                <strong>Platforms:</strong> GitHub, Google Colab, Jupyter Notebook, Kaggle,
+                Anaconda, Wandb
+              </p>
+            </article>
+            <article class="card reveal">
+              <h3 class="card-title">Tools and Concepts</h3>
+              <p>
+                <strong>Tools:</strong> Git and GitHub, VS Code, PyCharm, MySQL, PostgreSQL,
+                Eclipse, Postman, LaTeX, MS Office
+              </p>
+              <p>
+                <strong>Concepts:</strong> Machine Learning, Deep Learning, NLP, Large
+                Language Models, Generative AI, Agentic AI, OOP, Prompt Engineering
+              </p>
+            </article>
           </div>
         </div>
+      </section>
 
-        <div
-          class="mt-4 md:mt-6 bg-gray-200 p-4 rounded shadow flex flex-col md:flex-row items-center">
-          <div>
-            <h3 class="text-xl md:text-2xl font-bold">
-              Multi-lingual YouTube Comment Sentiment & Type Analysis
-            </h3>
-            <ul class="list-disc pl-5 text-base md:text-lg text-gray-700">
-              <li>
-                Designed and implemented a complete multilingual NLP pipeline centered on XLM-RoBERTa for sentiment and comment-type classification across Bangla, English, and Romanized Bangla.
-              </li>
-              <li>
-                Automated dataset creation using YouTube Data API and LLM-based labeling (Qwen2.5-14B) via prompt-driven JSON extraction, eliminating manual annotation.
-              </li>
-              <li>
-                Trained and evaluated multiple models including TF-IDF + MLP, LSTM/BiLSTM, and XLM-RoBERTa, achieving up to 76.68% sentiment and 76.05% type accuracy on test data.
-              </li>
-              <li>
-                Developed a FastAPI-based backend with REST endpoints and a web UI to analyze single comments or entire videos, with automated plots, and confidence visualizations.
-              </li>
-              <li>
-                <b>Tools & Framework:</b> Scikit-learn, PyTorch, Hugging Face Transformers, FastAPI, PostgreSQL, Postman.
-              </li>
-            </ul>
-            <a
-              href="https://github.com/sajan-sarker/Youtube_Comment_Sentiments_-_Type_Analysis"
-              class="text-blue-600 text-base md:text-lg">GitHub Repo</a>
+      <section id="certifications" class="section-wrapper">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2>Certifications</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <article class="card certificate-card reveal">
+              <img
+                src="static/img/Associate AI Engineer for Developers Certificate.jpg"
+                alt="Associate AI Engineer for Developers certificate"
+                class="certificate-img"
+                onclick="openModal(this.src)" />
+              <h3 class="card-title">Associate AI Engineer for Developers</h3>
+              <a
+                href="https://www.datacamp.com/completed/statement-of-accomplishment/track/acb8e446250a6fde9754bde933b685a67aa2c000"
+                target="_blank">Credential Link</a>
+            </article>
+            <article class="card certificate-card reveal">
+              <img
+                src="static/img/Google IT Automation with Python Professional Certificate.jpg"
+                alt="Google IT Automation with Python certificate"
+                class="certificate-img"
+                onclick="openModal(this.src)" />
+              <h3 class="card-title">Google IT Automation with Python</h3>
+              <a href="https://coursera.org/verify/professional-cert/JXMDH70DB3CK" target="_blank"
+                >Credential Link</a>
+            </article>
+            <article class="card certificate-card reveal">
+              <img
+                src="static/img/Google AI Essentials Certificate.jpg"
+                alt="Google AI Essentials certificate"
+                class="certificate-img"
+                onclick="openModal(this.src)" />
+              <h3 class="card-title">Google AI Essentials</h3>
+              <a href="https://coursera.org/verify/QJEPIF5AN4VM" target="_blank">Credential Link</a>
+            </article>
+            <article class="card certificate-card reveal">
+              <img
+                src="static/img/Meta Programming in Python Certificate.jpg"
+                alt="Meta Programming in Python certificate"
+                class="certificate-img"
+                onclick="openModal(this.src)" />
+              <h3 class="card-title">Meta Programming in Python</h3>
+              <a href="https://coursera.org/verify/JDG6VDMSFU5L" target="_blank">Credential Link</a>
+            </article>
+            <article class="card certificate-card reveal">
+              <img
+                src="static/img/DeepLearning.AI Machine Learning Specialization Coursera Certificate.jpg"
+                alt="Machine Learning Specialization certificate"
+                class="certificate-img"
+                onclick="openModal(this.src)" />
+              <h3 class="card-title">DeepLearning.AI ML Specialization</h3>
+              <a href="https://coursera.org/verify/specialization/C189OYW5JJRW" target="_blank"
+                >Credential Link</a>
+            </article>
+            <article class="card certificate-card reveal">
+              <img
+                src="static/img/CS50 Introduction to Programming with Python Certificate.png"
+                alt="CS50 Introduction to Programming with Python certificate"
+                class="certificate-img"
+                onclick="openModal(this.src)" />
+              <h3 class="card-title">CS50's Introduction to Programming with Python</h3>
+              <a
+                href="https://cs50.harvard.edu/certificates/f08d8bc1-b76e-47d9-a2c6-776264d9cc65"
+                target="_blank">Credential Link</a>
+            </article>
+            <article class="card certificate-card reveal sm:col-span-2 lg:col-span-1">
+              <img
+                src="static/img/Stanford University Code in Place Certificate.jpg"
+                alt="Stanford Code in Place certificate"
+                class="certificate-img"
+                onclick="openModal(this.src)" />
+              <h3 class="card-title">Stanford University's Code in Place</h3>
+              <a href="https://codeinplace.stanford.edu/cip4/certificate/11gxkv" target="_blank"
+                >Credential Link</a>
+            </article>
           </div>
         </div>
+      </section>
 
-        <div
-          class="mt-4 md:mt-6 bg-gray-200 p-4 rounded shadow flex flex-col md:flex-row items-center">
-          <div>
-            <h3 class="text-xl md:text-2xl font-bold">
-              An Explainable Approach for Network Intrusion Detection Using
-              Machine Learning and Deep Neural Network [BSc Thesis]
-            </h3>
-            <ul class="list-disc pl-5 text-base md:text-lg text-gray-700">
-              <li>
-                Built a weighted ensemble model for robust classification,
-                integrating SHAP and LIME for explainability.
-              </li>
-              <li>
-                Analyzed the impact of synthetic data on network attack
-                classification performance.
-              </li>
-              <li>
-                Achieved 97.26% accuracy on a multi-class classification task with a low false positive rate of 0.0048.
-              </li>
-              <li>
-                <b>Tools & Framework:</b> Machine Learning, Data Analysis, Scikit-Learn, Explainable AI, PyTorch.
-            </ul>
-            <a
-              href="https://github.com/sajan-sarker/web-attack-detection"
-              class="text-blue-600 text-base md:text-lg">GitHub Repo</a>
+      <section id="contact" class="section-wrapper section-alt">
+        <div class="max-w-4xl mx-auto px-4">
+          <h2>Contact</h2>
+          <div class="content-card text-center reveal">
+            <p class="text-lg text-slate-700">
+              Interested in collaborating on AI/ML projects or research or discussing opportunities?
+            </p>
+            <p class="text-lg text-slate-700 mt-2">Let's connect.</p>
+            <div class="mt-6 flex flex-col md:flex-row justify-center gap-3 md:gap-5 text-base md:text-lg">
+              <p><strong>Phone:</strong> +880 1722-425426</p>
+              <p>
+                <strong>Email:</strong>
+                <a href="mailto:sajan.k.sarker@gmail.com">sajan.k.sarker@gmail.com</a>
+              </p>
+              <p><strong>Location:</strong> Uttara, Dhaka, Bangladesh</p>
+            </div>
           </div>
         </div>
-        <div
-          class="mt-4 md:mt-6 bg-gray-200 p-4 rounded shadow flex flex-col md:flex-row items-center">
+      </section>
+    </main>
 
-          <div>
-            <h3 class="text-xl md:text-2xl font-bold">
-              Pre-trained Transformers for Java-Python Code Translation [BSc
-              Direct Research]
-            </h3>
-            <ul class="list-disc pl-5 text-base md:text-lg text-gray-700">
-              <li>
-                Designed a 2-step Java-to-Python code translation pipeline using
-                CodeT5 for initial translation and PLBART for correction and
-                minimization.
-              </li>
-              <li>
-                Fine-tuned CodeT5 and PLBART models to improve syntactic and
-                semantic accuracy in cross-language code generation.
-              </li>
-              <li>
-                Achieved BLEU score of 51.72 and CodeBLEU of 0.4913 with CodeT5;
-                PLBART refinement step scored 28.92 BLEU and 0.3327 CodeBLEU.
-              </li>
-              <li>
-                <b>Tools & Framework:</b> Natural Language Processing, PyTorch, Hugging Face Transformer.
-            </ul>
-            <a
-              href="https://github.com/sajan-sarker/java-python-code-translation"
-              class="text-blue-600 text-base md:text-lg">GitHub Repo</a>
-          </div>
-        </div>
-
-        <div
-          class="mt-4 md:mt-6 bg-gray-200 p-4 rounded shadow flex flex-col md:flex-row items-center">
-          <div>
-            <h3 class="text-xl md:text-2xl font-bold">
-              Bone Fracture Classification Using Deep Learning
-            </h3>
-            <ul class="list-disc pl-5 text-base md:text-lg text-gray-700">
-              <li>
-                Fine-tuned two pre-trained deep learning models—EfficientNet-B0
-                and VGG16—for binary classification of bone X-ray images into
-                Fractured and Not Fractured.
-              </li>
-              <li>
-                Conducted performance evaluation using classification metrics,
-                with EfficientNet-B0 achieving 99.21% accuracy, outperforming
-                VGG16.
-              </li>
-              <li>
-                <b>Tools & Framework:</b> Deep Learning, Transfer Learning, PyTorch.
-            </ul>
-            <a
-              href="https://github.com/sajan-sarker/bone-fracture-classifications"
-              class="text-blue-600 text-base md:text-lg">GitHub Repo</a>
-          </div>
-        </div>
-
-        <div
-          class="mt-4 md:mt-6 bg-gray-200 p-4 rounded shadow flex flex-col md:flex-row items-center">
-          <div>
-            <h3 class="text-xl md:text-2xl font-bold">
-              Malicious URL Classification with Machine Learning
-            </h3>
-            <ul class="list-disc pl-5 text-base md:text-lg text-gray-700">
-              <li>
-                Developed a machine learning-based classifier to identify and
-                categorize malicious URLs.
-              </li>
-              <li>
-                Implemented multiple traditional ML models including Decision
-                Tree, Random Forest, XGBoost, CatBoost, KNN, and a Voting
-                Classifier.
-              </li>
-              <li>
-                Performed URL-based feature extraction, feature engineering, and
-                hyperparameter tuning, achieving a highest accuracy of 93.80%.
-              </li>
-              <li>
-                <b>Tools & Framework:</b> Machine Learning, Data Analysis, Scikit-learn.
-              </li>
-            </ul>
-            <a
-              href="https://github.com/sajan-sarker/Malicious_URL_Classification"
-              class="text-blue-600 text-base md:text-lg">GitHub Repo</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="p-6 bg-gray-100">
-      <div class="max-w-4xl mx-auto px-4">
-        <h2 class="text-2xl md:text-3xl font-bold text-center">Skills</h2>
-        <p class="mt-4 md:mt-6 text-center text-base md:text-lg">
-          <b>Languages:</b> Python, Java, C/C++, SQL, HTML/CSS.
-        </p>
-        <p class="mt-4 md:mt-6 text-center text-base md:text-lg">
-          <b>Tools:</b> Git & GitHub, LaTeX, MS Office, VS Code, Code::Blocks,
-          PyCharm, MySQL, PostgreSQL, Eclipse, Postman.
-        </p>
-        <p class="mt-4 md:mt-6 text-center text-base md:text-lg">
-          <b>Platforms:</b> GitHub, Google Colab, Jupyter Notebook, Kaggle,
-          Anaconda, Qandb.
-        </p>
-        <p class="mt-4 md:mt-6 text-center text-base md:text-lg">
-          <b>Libraries & Frameworks:</b> NumPy, Pandas, Matplotlib, Seaborn,
-          Scikit-learn, TensorFlow, PyTorch, Transformers, LangChain, FastAPI.
-        </p>
-        <p class="mt-4 md:mt-6 text-center text-base md:text-lg">
-          <b>Concepts:</b> Machine Learning (ML), Deep Learning (DL), Natural Language Processing (NLP), Large Language Models (LLM), Generative AI, Agentic AI, Object-Oriented Programming (OOP), Troubleshooting & Debugging, Prompt Engineering.
-        </p>
-      </div>
-    </section>
-
-    <section id="certifications" class="p-6 bg-white">
-      <div class="max-w-4xl mx-auto px-4">
-        <h2 class="text-2xl md:text-3xl font-bold text-center">
-          Certifications
-        </h2>
-        <div class="mt-4 md:mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="card bg-gray-200 p-4 m-2 rounded shadow">
-            <img
-              src="static/img/Associate AI Engineer for Developers Certificate.jpg"
-              alt="Certificate 1"
-              class="w-full h-32 object-cover mb-2 certificate-img"
-              onclick="openModal(this.src)" />
-            <h3 class="text-lg font-bold">
-              Associate AI Engineer for Developers
-            </h3>
-            <a
-              href="https://www.datacamp.com/completed/statement-of-accomplishment/track/acb8e446250a6fde9754bde933b685a67aa2c000"
-              class="text-blue-600 text-base">Credential Link</a>
-          </div>
-          <div class="card bg-gray-200 p-4 m-2 rounded shadow">
-            <img
-              src="static/img/Google IT Automation with Python Professional Certificate.jpg"
-              alt="Certificate 2"
-              class="w-full h-32 object-cover mb-2 certificate-img"
-              onclick="openModal(this.src)" />
-            <h3 class="text-lg font-bold">
-              Google IT Automation with Python Professional Certificate
-            </h3>
-            <a
-              href="https://coursera.org/verify/professional-cert/JXMDH70DB3CK"
-              class="text-blue-600 text-base">Credential Link</a>
-          </div>
-
-          <div class="card bg-gray-200 p-4 m-2 rounded shadow">
-            <img
-              src="static/img/Google AI Essentials Certificate.jpg"
-              alt="Certificate 3"
-              class="w-full h-32 object-cover mb-2 certificate-img"
-              onclick="openModal(this.src)" />
-            <h3 class="text-lg font-bold">Google AI Essentials</h3>
-            <a
-              href="https://coursera.org/verify/QJEPIF5AN4VM"
-              class="text-blue-600 text-base">Credential Link</a>
-          </div>
-
-          <div class="card bg-gray-200 p-4 m-2 rounded shadow">
-            <img
-              src="static/img/Meta Programming in Python Certificate.jpg"
-              alt="Certificate 4"
-              class="w-full h-32 object-cover mb-2 certificate-img"
-              onclick="openModal(this.src)" />
-            <h3 class="text-lg font-bold">Meta Programming in Python</h3>
-            <a
-              href="https://coursera.org/verify/JDG6VDMSFU5L"
-              class="text-blue-600 text-base">Credential Link</a>
-          </div>
-          <div class="card bg-gray-200 p-4 m-2 rounded shadow">
-            <img
-              src="static/img/DeepLearning.AI Machine Learning Specialization Coursera Certificate.jpg"
-              alt="Certificate 5"
-              class="w-full h-32 object-cover mb-2 certificate-img"
-              onclick="openModal(this.src)" />
-            <h3 class="text-lg font-bold">
-              DeepLearning.AI Machine Learning Specialization Coursera
-            </h3>
-            <a
-              href="https://coursera.org/verify/specialization/C189OYW5JJRW"
-              class="text-blue-600 text-base">Credential Link</a>
-          </div>
-          <div class="card bg-gray-200 p-4 m-2 rounded shadow">
-            <img
-              src="static/img/CS50 Introduction to Programming with Python Certificate.png"
-              alt="Certificate 6"
-              class="w-full h-32 object-cover mb-2 certificate-img"
-              onclick="openModal(this.src)" />
-            <h3 class="text-lg font-bold">
-              CS50's Introduction to Programming with Python
-            </h3>
-            <a
-              href="https://cs50.harvard.edu/certificates/f08d8bc1-b76e-47d9-a2c6-776264d9cc65"
-              class="text-blue-600 text-base">Credential Link</a>
-          </div>
-          <div class="card bg-gray-200 p-4 m-2 rounded shadow">
-            <img
-              src="static/img/Stanford University Code in Place Certificate.jpg"
-              alt="Certificate 7"
-              class="w-full h-32 object-cover mb-2 certificate-img"
-              onclick="openModal(this.src)" />
-            <h3 class="text-lg font-bold">
-              Stanford University's Code in Place
-            </h3>
-            <a
-              href="https://codeinplace.stanford.edu/cip4/certificate/11gxkv"
-              class="text-blue-600 text-base">Credential Link</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="p-6 bg-gray-100">
-      <div class="max-w-4xl mx-auto px-4">
-        <h2 class="text-2xl md:text-3xl font-bold text-center">CONTACT</h2>
-        <p class="mt-4 md:mt-6 text-gray-600 text-center text-base md:text-lg">
-          I have got just what you need. Let's talk.
-        </p>
-        <div class="mt-4 md:mt-6 flex justify-center space-x-4 flex-wrap">
-          <p class="text-base md:text-lg">Call +880 1722-425426 |</p>
-          <p class="text-base md:text-lg">
-            <a
-              href="mailto:sajan.k.sarker@gmail.com"
-              class="text-blue-600 hover:underline">
-              sajan.k.sarker@gmail.com
-            </a>
-          </p>
-          <p class="text-base md:text-lg">| Uttara, Dhaka, Bangladesh</p>
-        </div>
-      </div>
-    </section>
-
-    <footer class="bg-gray-800 text-white p-4 text-center">
-      <div class="max-w-4xl mx-auto px-4">
-        <p class="text-base md:text-lg">
-          © 2026 Sajan Kumer Sarker. All rights reserved.
-        </p>
+    <footer class="site-footer">
+      <div class="max-w-6xl mx-auto px-4">
+        <p>© 2026 Sajan Kumer Sarker. All rights reserved.</p>
       </div>
     </footer>
 
-    <!-- Modal for Certificate Preview -->
     <div id="imgModal" class="modal">
       <span class="modal-close" id="modalClose">&times;</span>
-      <img id="modalImage" src alt="Preview" />
+      <img id="modalImage" src alt="Certificate preview" />
     </div>
 
     <script src="static/js/script.js"></script>

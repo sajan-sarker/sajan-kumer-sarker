@@ -1,78 +1,94 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Contact Form Submission
-  const form = document.querySelector("form");
-  if (form) {
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const formData = new FormData(form);
-      await fetch("/send-email", {
-        method: "POST",
-        body: formData,
-      });
-      window.location.href = "/";
-    });
-  }
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImage");
+  const modalClose = document.getElementById("modalClose");
+  const navLinks = document.querySelectorAll(".nav-link");
+  const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+  const sections = document.querySelectorAll("section[id]");
+  const revealElements = document.querySelectorAll(".reveal");
 
-  // Smooth Scrolling
+  // Smooth scrolling for in-page anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
+    anchor.addEventListener("click", (e) => {
+      const targetId = anchor.getAttribute("href");
+      const target = targetId ? document.querySelector(targetId) : null;
+      if (!target) {
+        return;
+      }
       e.preventDefault();
-      document.querySelector(this.getAttribute("href")).scrollIntoView({
+      target.scrollIntoView({
         behavior: "smooth",
       });
+      mobileMenu?.classList.add("hidden");
     });
   });
 
-  // Mobile Menu Toggle
-  const menuToggle = document.getElementById("menu-toggle");
-  const mobileMenu = document.getElementById("mobile-menu");
+  // Mobile menu toggle
   if (menuToggle && mobileMenu) {
     menuToggle.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
     });
   }
 
-  // Image Modal
+  // Certificate image modal
   window.openModal = function (src) {
-    const modal = document.getElementById("imgModal");
-    const modalImg = document.getElementById("modalImage");
-    modal.style.display = "flex";
+    if (!modal || !modalImg) {
+      return;
+    }
     modalImg.src = src;
+    modal.style.display = "flex";
+    document.body.style.overflow = "hidden";
   };
 
-  document.getElementById("modalClose").addEventListener("click", () => {
-    document.getElementById("imgModal").style.display = "none";
-  });
+  function closeModal() {
+    if (modal) {
+      modal.style.display = "none";
+      document.body.style.overflow = "";
+    }
+  }
 
-  // Close Modal on Outside Click
-  document.getElementById("imgModal").addEventListener("click", (e) => {
+  modalClose?.addEventListener("click", closeModal);
+  modal?.addEventListener("click", (e) => {
     if (e.target.id === "imgModal") {
-      e.target.style.display = "none";
+      closeModal();
+    }
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeModal();
     }
   });
 
-  // Scrollspy (Active Nav Highlight)
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".nav-link");
-
+  // Scrollspy active section highlighting
   function activateLink() {
-    let scrollY = window.scrollY;
-
+    const scrollY = window.scrollY + 140;
     sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 120; // adjust for navbar height
+      const sectionTop = section.offsetTop;
       const sectionHeight = section.offsetHeight;
       const sectionId = section.getAttribute("id");
 
       if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-        navLinks.forEach((link) => {
-          link.classList.remove("active");
-          if (link.dataset.section === sectionId) {
-            link.classList.add("active");
-          }
+        [...navLinks, ...mobileNavLinks].forEach((link) => {
+          link.classList.toggle("active", link.dataset.section === sectionId);
         });
       }
     });
   }
 
+  // Reveal animations on scroll
+  function revealOnScroll() {
+    revealElements.forEach((element) => {
+      const rect = element.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 80) {
+        element.classList.add("is-visible");
+      }
+    });
+  }
+
   window.addEventListener("scroll", activateLink);
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+  activateLink();
 });
