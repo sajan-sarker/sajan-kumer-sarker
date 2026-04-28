@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
   const sections = document.querySelectorAll("section[id]");
   const revealElements = document.querySelectorAll(".reveal");
+  const glowTargets = document.querySelectorAll(
+    ".card, .content-card, .project-card, .project-card > a, .project-tech span, .skill-tags span, .btn-primary, .btn-secondary, .social-links a[aria-label='GitHub']"
+  );
 
   // Smooth scrolling for in-page anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -86,6 +89,35 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // Cursor-follow glow on cards/chips/buttons
+  glowTargets.forEach((element) => {
+    element.classList.add("cursor-glow");
+
+    element.addEventListener("mousemove", (event) => {
+      const rect = element.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      element.style.setProperty("--glow-x", `${x}px`);
+      element.style.setProperty("--glow-y", `${y}px`);
+
+      if (element.matches(".project-tech span, .skill-tags span, .project-card > a, .social-links a[aria-label='GitHub']")) {
+        const hue = Math.round(((x / Math.max(rect.width, 1)) * 320 + (y / Math.max(rect.height, 1)) * 40) % 360);
+        element.style.setProperty("--chip-hue", `${hue}`);
+      }
+
+      if (element.matches(".btn-primary, .btn-secondary")) {
+        const hue = Math.round(210 + (x / Math.max(rect.width, 1)) * 70);
+        element.style.setProperty("--chip-hue", `${hue}`);
+      }
+
+      element.classList.add("is-glow-active");
+    });
+
+    element.addEventListener("mouseleave", () => {
+      element.classList.remove("is-glow-active");
+    });
+  });
 
   window.addEventListener("scroll", activateLink);
   window.addEventListener("scroll", revealOnScroll);
